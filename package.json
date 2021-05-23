@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack serve --content-base ./",
+    "dev": "webpack serve",
     "start": "sirv --port 8080",
     "analyze": "webpack --json > stats.json && webpack-bundle-analyzer stats.json public"
   }
