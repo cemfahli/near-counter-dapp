@@ -386,9 +386,9 @@ img,video{
   line-height:1.75rem
 }
 
-.text-xl{
-  font-size:1.25rem;
-  line-height:1.75rem
+.text-2xl{
+  font-size:1.5rem;
+  line-height:2rem
 }
 
 .p-2{
@@ -591,7 +591,33 @@ body{
 }
 
 @media(min-width: 1280px){
+  .xl\:text-lg{
+    font-size:1.125rem;
+    line-height:1.75rem
+  }
+
+  .xl\:text-4xl{
+    font-size:2.25rem;
+    line-height:2.5rem
+  }
+
+  .xl\:p-14{
+    padding:3.5rem
+  }
+
+  .xl\:pb-9{
+    padding-bottom:2.25rem
+  }
 }
 
 @media(min-width: 1536px){
+  .\32xl\:text-xl{
+    font-size:1.25rem;
+    line-height:1.75rem
+  }
+
+  .\32xl\:text-5xl{
+    font-size:3rem;
+    line-height:1
+  }
 }

@@ -68,25 +68,29 @@
 	
 </script>
 
-<Header bind:wallet {contractName} {appName}></Header>
-<main class="font-mono h-3/4 md:h-auto">
-	<div class="text-center flex justify-evenly items-center flex-col flex-grow-0 md:flex-row p-4 md:p-9 h-full">
-		<div class="p-4 md:px-4">
-			<h1 class="font-bold text-xl pb-6">Hello {(wallet && wallet.getAccountId()) || 'Friend'}!</h1>
-			This is a simple counter dapp running on the NEAR testnet. 
-			{#if !wallet || !wallet.isSignedIn()}
-				<br> Sign in to your Near account to increase or decrease the count!
-			{:else}
-				<br> You can increase or decrease the count with some gas!
-			{/if}
-		</div>
+<main class="xl:text-lg 2xl:text-xl">
+	<Header bind:wallet {contractName} {appName}></Header>
+	<div class="font-mono h-3/4 md:h-auto">
+		<div class="text-center flex justify-evenly items-center flex-col flex-grow-0 md:flex-row p-4 md:p-9 xl:p-14 h-full">
+			<div class="p-4 md:px-4">
+				<h1 class="font-bold text-2xl xl:text-4xl 2xl:text-5xl pb-6 xl:pb-9">
+					Hello {(wallet && wallet.getAccountId()) || 'Friend'}!
+				</h1>
+				This is a simple counter dapp running on the NEAR testnet. 
+				{#if !wallet || !wallet.isSignedIn()}
+					<br> Sign in to your Near account to increase or decrease the count!
+				{:else}
+					<br> You can increase or decrease the count with some gas!
+				{/if}
+			</div>
 
-		<div class="w-3/4 md:w-auto">
-			{#if contract}
-				<Counter {contract} {wallet}></Counter>
-			{:else}
-				<p>...Connecting to Near...</p>
-			{/if}
+			<div class="w-3/4 md:w-auto">
+				{#if contract}
+					<Counter {contract} {wallet}></Counter>
+				{:else}
+					<p>...Connecting to Near...</p>
+				{/if}
+			</div>
 		</div>
 	</div>
 </main>
