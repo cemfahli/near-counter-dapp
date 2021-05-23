@@ -77,6 +77,7 @@ module.exports = {
 	],
 	devtool: prod ? false : 'source-map',
 	devServer: {
+		publicPath: '/public/build',
 		hot: true
 	}
 };
