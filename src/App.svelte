@@ -25,13 +25,13 @@
 	let account;
 	let contract;
 
-	$: config = {
-		networkId: 'testnet',
+	let config = {
+		networkId: process.env.NETWORK_ID,
 		keyStore,
-		nodeUrl: 'https://rpc.testnet.near.org',
-		walletUrl: 'https://wallet.testnet.near.org',
-		helperUrl: 'https://helper.testnet.near.org',
-		explorerUrl: 'https://explorer.testnet.near.org'
+		nodeUrl: process.env.NODE_URL,
+		walletUrl: process.env.WALLET_URL,
+		helperUrl: process.env.HELPER_URL,
+		explorerUrl: process.env.EXPLORER_URL 
 	};
 
 	//logic to connect to the chain and initialize account/contract
