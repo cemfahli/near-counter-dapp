@@ -1,6 +1,7 @@
 {
   "name": "near-counter-dapp",
   "version": "1.0.0",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "cross-env": "^7.0.3",
